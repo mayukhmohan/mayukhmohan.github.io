@@ -1,33 +1,3 @@
-<?php 
-if(isset($_POST['submit'])){
-    $to = "mayukh.iiest@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $name = $_POST['name'];
-    $subject = $_POST['subject'];;
-    $subject2 = "Copy of your form submission";
-    $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
-	
-	
-	// Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-	  /*
-	  $contact->smtp = array(
-		'host' => 'example.com',
-		'username' => 'example',
-		'password' => 'pass',
-		'port' => '587'
-	  );
-	  */
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +36,7 @@ if(isset($_POST['submit'])){
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.php" class="logo"><img src="assets/img/mm6.jpg" alt="" class="img-fluid"></a>
+      <a href="index.html" class="logo"><img src="assets/img/mm6.jpg" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -555,7 +525,7 @@ if(isset($_POST['submit'])){
               <p>McElice Code Based Cryptosystem considered.</p>
               <a href="assets/img/projects/crypto_1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Coding Based Cryptography for Post Quantum Era. 
 			  <br>Jul,2019 - Jul,2020"><i class="bx bx-plus"></i></a>
-              <a href="project_details_1.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="project_details_1.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -566,7 +536,7 @@ if(isset($_POST['submit'])){
               <p>Image Processing , Convolutional Neural Network and Recurrent neural network</p>
               <a href="assets/img/projects/ml_1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Image Processing , Convolutional Neural Network and Recurrent neural network
 			  <br>Jul,2018 - Jan,2019"><i class="bx bx-plus"></i></a>
-              <a href="project_details_1.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="project_details_1.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -577,7 +547,7 @@ if(isset($_POST['submit'])){
               <p>Mentor - Prof. Asit K. Das, Paper accepted by Springer, Using computer vision and Convolutional Neural Network</p>
               <a href="assets/img/projects/ml_2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Self Driving Car
 			  <br>Aug,2018 - Oct,2018"><i class="bx bx-plus"></i></a>
-              <a href="project_details_1.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="project_details_1.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -588,7 +558,7 @@ if(isset($_POST['submit'])){
               <p>Sunshine is an Android application for the weather forecast by Udacity.</p>
               <a href="assets/img/projects/app_1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Weather Application Development on Android
 			  <br>Feb 2018 - June 2018"><i class="bx bx-plus"></i></a>
-              <a href="project_details_1.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="project_details_1.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -599,7 +569,7 @@ if(isset($_POST['submit'])){
               <p>Bio-Informatics, Stacked Auto Encoders and Support Vector Machine</p>
               <a href="assets/img/projects/ml_3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Contact Matrix for Protein-Protein Interaction
 			  <br>Jan,2018 - Mar,2018"><i class="bx bx-plus"></i></a>
-              <a href="project_details_1.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="project_details_1.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -610,7 +580,7 @@ if(isset($_POST['submit'])){
               <p>NIRMAAN (an official college website affiliated professor feedback form).</p>
               <a href="assets/img/projects/web_1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web Development with AJAX
 			  <br>Jan 2018"><i class="bx bx-plus"></i></a>
-              <a href="project_details_1.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="project_details_1.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 		  
@@ -621,7 +591,7 @@ if(isset($_POST['submit'])){
               <p>Mentor – Dr. Biplab Kumar Sikdar, IIEST, Shibpur</p>
               <a href="assets/img/projects/app_2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Android Application Development on Android ‘Quake Report'
 			  <br>Aug,2017 – Dec,2017"><i class="bx bx-plus"></i></a>
-              <a href="project_details_1.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="project_details_1.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -647,11 +617,11 @@ if(isset($_POST['submit'])){
             <div class="col-lg-4 col-md-6">
               <div class="journal-info">
 
-                <a href="blog_1.php"><img src="assets/img/grg.png" class="img-responsive" alt="img"></a>
+                <a href="blog_1.html"><img src="assets/img/grg.png" class="img-responsive" alt="img"></a>
 
                 <div class="journal-txt">
 
-                  <h4><a href="blog_1.php">Inter Process Communication (JAVA - Python)</a></h4>
+                  <h4><a href="blog_1.html">Inter Process Communication (JAVA - Python)</a></h4>
                   <p class="separator">Comparative studies with REST-JSON, gRPC-Protobuff, GraphQL
                   </p>
 
